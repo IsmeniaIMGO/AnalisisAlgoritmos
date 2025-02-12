@@ -125,7 +125,7 @@ public class Test {
 
 
         //------------------------------------------------MATRIZ------------------------------
-
+        
         //double [][] arreglo = {{15, 6, 8,}, {6, 21, 43}, {8, 43, 3}};
         
         /*double [][] arreglo = {
@@ -135,6 +135,7 @@ public class Test {
         {4, 8, 11, 13, 14},
         {5, 9, 12, 14, 15}};*/
 
+        /* 
         int tamanio = 500;
         double[][] arreglo = new double[tamanio][tamanio];
 
@@ -168,14 +169,64 @@ public class Test {
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
+        */
 
 
         //------------------------------------------------MULTIPLICACION------------------------------
-        
+        Multiplicacion multiplicacion = new Multiplicacion();
+        int[][] resultado;
+
+        int[][] A = {
+            {1, 2},
+            {4, 5},
+            {7, 8},
+            {10, 11}
+        };
+
+        int[][] B = {
+            {9, 8, 7, 6},
+            {4, 3, 2, 1}
+        };
+
+        System.out.println("Matriz a: " );
+        mostrarMatriz(A);
+
+        System.out.println("Matriz b: ");
+        mostrarMatriz(B);
+
+        System.out.println("\nMultiplicarMatrices1");
+        startTime = System.nanoTime();
+        resultado = multiplicacion.multiplicarMatriz1(A, B);
+        endTime = System.nanoTime();
+        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
+        mostrarMatriz(resultado);
+
+        System.out.println("\nMultiplicarMatrices2");
+        startTime = System.nanoTime();
+        resultado = multiplicacion.multiplicarMatriz2(A, B);
+        endTime = System.nanoTime();
+        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
+        mostrarMatriz(resultado);
 
 
+        //para la multiplicacion de a x b
+        //los tiempos son los siguientes: 
+        //MultiplicarMatrices1: 25900 nanosegundos
+        //MultiplicarMatrices2: 18700 nanosegundos
+
+       
     }
 
+
+    public static void mostrarMatriz(int[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("\n");
+    }
 
     
 }
