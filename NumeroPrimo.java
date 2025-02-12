@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.util.Random;
 
-public class Algoritmos {
+public class NumeroPrimo {
    
 
 

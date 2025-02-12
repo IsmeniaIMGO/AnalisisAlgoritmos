@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) {
-        Algoritmos algoritmos = new Algoritmos();
+        NumeroPrimo numeroPrimo = new NumeroPrimo();
 
         int iteracion = 5;
         int numero = 31;
@@ -18,7 +18,7 @@ public class Test {
         System.out.println("Numero: " + numero);
         
         startTime = System.nanoTime();
-        System.out.println(algoritmos.determinarNumeroPrimo1(numero));
+        System.out.println(numeroPrimo.determinarNumeroPrimo1(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -26,7 +26,7 @@ public class Test {
         System.out.println("DeterminarNumeroPrimo2");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.determinarNumeroPrimo2(numero));
+        System.out.println(numeroPrimo.determinarNumeroPrimo2(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -34,7 +34,7 @@ public class Test {
         System.out.println("DeterminarNumeroPrimo3");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.determinarNumeroPrimo3(numero));
+        System.out.println(numeroPrimo.determinarNumeroPrimo3(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
    
@@ -42,7 +42,7 @@ public class Test {
         System.out.println("DeterminarNumeroPrimo4");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.determinarNumeroPrimo4(numero));
+        System.out.println(numeroPrimo.determinarNumeroPrimo4(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -50,7 +50,7 @@ public class Test {
         System.out.println("DeterminarNumeroPrimo5");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.determinarNumeroPrimo5(numero));
+        System.out.println(numeroPrimo.determinarNumeroPrimo5(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -58,7 +58,7 @@ public class Test {
         System.out.println("Fermat");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.pruebaFermat(numero, iteracion));
+        System.out.println(numeroPrimo.pruebaFermat(numero, iteracion));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -66,7 +66,7 @@ public class Test {
         System.out.println("Miller Rabin");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.pruebaMillerRabin(numero, iteracion));
+        System.out.println(numeroPrimo.pruebaMillerRabin(numero, iteracion));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -74,7 +74,7 @@ public class Test {
         System.out.println("Solovay - Strassen");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.pruebaSolovayStrassen(numero, iteracion));
+        System.out.println(numeroPrimo.pruebaSolovayStrassen(numero, iteracion));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -82,7 +82,7 @@ public class Test {
         System.out.println("Baillie - PSW CORREGIR, NO FUNCIONA");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        //System.out.println(algoritmos.pruebaBailliePSW(numero));
+        //System.out.println(numeroPrimo.pruebaBailliePSW(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución " + (endTime - startTime) + " nanosegundos \n");
 
@@ -90,7 +90,7 @@ public class Test {
         System.out.println("Primalidad AKS");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.pruebaPrimalidadAKS(numero));
+        System.out.println(numeroPrimo.pruebaPrimalidadAKS(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -99,7 +99,7 @@ public class Test {
         System.out.println("Wilson no es para numeros grandes");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        //System.out.println(algoritmos.pruebaWilson(numero));
+        //System.out.println(numeroPrimo.pruebaWilson(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución:" + (endTime - startTime) + " nanosegundos \n");
 
@@ -107,7 +107,7 @@ public class Test {
         System.out.println("LucasLehmer solo funciona con numeros Mersenne");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        //System.out.println(algoritmos.pruebaLucasLehmer(numero));
+        //System.out.println(numeroPrimo.pruebaLucasLehmer(numero));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -116,7 +116,7 @@ public class Test {
         System.out.println("Lechman");
         System.out.println("Numero: " + numero);
         startTime = System.nanoTime();
-        System.out.println(algoritmos.pruebaLehmann(numero, iteracion));
+        System.out.println(numeroPrimo.pruebaLehmann(numero, iteracion));
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
@@ -169,6 +169,9 @@ public class Test {
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos \n");
 
 
+
+        //------------------------------------------------MULTIPLICACION------------------------------
+        
 
 
     }
