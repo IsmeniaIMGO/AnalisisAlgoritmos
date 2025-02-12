@@ -174,7 +174,7 @@ public class Test {
 
         //------------------------------------------------MULTIPLICACION------------------------------
         Multiplicacion multiplicacion = new Multiplicacion();
-        int[][] resultado;
+        int[][] resultado1;
 
         int[][] A = {
             {1, 2},
@@ -196,17 +196,17 @@ public class Test {
 
         System.out.println("\nMultiplicarMatrices1");
         startTime = System.nanoTime();
-        resultado = multiplicacion.multiplicarMatriz1(A, B);
+        resultado1 = multiplicacion.multiplicarMatriz1(A, B);
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
-        mostrarMatriz(resultado);
+        mostrarMatriz(resultado1);
 
         System.out.println("\nMultiplicarMatrices2");
         startTime = System.nanoTime();
-        resultado = multiplicacion.multiplicarMatriz2(A, B);
+        resultado1 = multiplicacion.multiplicarMatriz2(A, B);
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
-        mostrarMatriz(resultado);
+        mostrarMatriz(resultado1);
 
 
         //para la multiplicacion de a x b
@@ -214,8 +214,40 @@ public class Test {
         //MultiplicarMatrices1: 25900 nanosegundos
         //MultiplicarMatrices2: 18700 nanosegundos
 
+
+        int [] resultado2;
+        int [] C = {1,3};
+        int [] D = {6,4};
+
+
+        System.out.println("Matriz C: " );
+        mostrarArreglo(C);
+
+        System.out.println("Matriz D: " );
+        mostrarArreglo(D);
+
+        System.out.println("\nmultiplicar numeros grandes 1");
+        startTime = System.nanoTime();
+        resultado2 = multiplicacion.multiplicarNumeroGrande1(C, D);
+        endTime = System.nanoTime();
+        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
+        mostrarArreglo(resultado2);
        
+        System.out.println("\nmultiplicar numeros grandes 2");
+        startTime = System.nanoTime();
+        resultado2 = multiplicacion.multiplicarNumeroGrande2(C, D);
+        endTime = System.nanoTime();
+        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
+        mostrarArreglo(resultado2);
+
+
+        //para la multiplicacion de c x d
+        //los tiempos son los siguientes: 
+        //MultiplicarNumerosGrandes1: 15200 nanosegundos
+        //MultiplicarNumerosGrandes2: 16400 nanosegundos 
     }
+
+
 
 
     public static void mostrarMatriz(int[][] matriz) {
@@ -224,6 +256,20 @@ public class Test {
                 System.out.print(matriz[i][j] + " ");
             }
             System.out.println();
+        }
+        System.out.println("\n");
+    }
+
+
+    public static void mostrarArreglo(int[] arreglo) {
+        boolean leadingZero = true;
+        for (int i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] != 0) {
+                leadingZero = false;
+            }
+            if (!leadingZero) {
+                System.out.print(arreglo[i]);
+            }
         }
         System.out.println("\n");
     }
