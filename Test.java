@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Test {
     public static void main(String[] args) {
         NumeroPrimo numeroPrimo = new NumeroPrimo();
@@ -176,37 +178,34 @@ public class Test {
         Multiplicacion multiplicacion = new Multiplicacion();
         int[][] resultado1;
 
-        int[][] A = {
-            {1, 2},
-            {4, 5},
-            {7, 8},
-            {10, 11}
-        };
+        int n = 4000;
+        int p = 3000;
+        int k= 2000;
 
-        int[][] B = {
-            {9, 8, 7, 6},
-            {4, 3, 2, 1}
-        };
+        int[][] A = generarMatriz(n, p);
+        int[][] B = generarMatriz(k, n);
 
-        System.out.println("Matriz a: " );
+
+
+       /* System.out.println("Matriz a: " );
         mostrarMatriz(A);
 
         System.out.println("Matriz b: ");
-        mostrarMatriz(B);
+        mostrarMatriz(B);*/
 
         System.out.println("\nMultiplicarMatrices1");
         startTime = System.nanoTime();
         resultado1 = multiplicacion.multiplicarMatriz1(A, B);
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
-        mostrarMatriz(resultado1);
+        //mostrarMatriz(resultado1);
 
         System.out.println("\nMultiplicarMatrices2");
         startTime = System.nanoTime();
         resultado1 = multiplicacion.multiplicarMatriz2(A, B);
         endTime = System.nanoTime();
-        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
-        mostrarMatriz(resultado1);
+        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos\n");
+        //mostrarMatriz(resultado1);
 
 
         //para la multiplicacion de a x b
@@ -216,29 +215,34 @@ public class Test {
 
 
         int [] resultado2;
-        int [] C = {1,3};
-        int [] D = {6,4};
+
+        int size = 5;
+        int size2 = 4;
+        
+        int [] C = generarArreglo(size);
+        int [] D = generarArreglo(size2);
 
 
-        System.out.println("Matriz C: " );
+        /*System.out.println("Matriz C: " );
         mostrarArreglo(C);
 
         System.out.println("Matriz D: " );
-        mostrarArreglo(D);
+        mostrarArreglo(D);*/
+
 
         System.out.println("\nmultiplicar numeros grandes 1");
         startTime = System.nanoTime();
         resultado2 = multiplicacion.multiplicarNumeroGrande1(C, D);
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
-        mostrarArreglo(resultado2);
+        //mostrarArreglo(resultado2);
        
         System.out.println("\nmultiplicar numeros grandes 2");
         startTime = System.nanoTime();
         resultado2 = multiplicacion.multiplicarNumeroGrande2(C, D);
         endTime = System.nanoTime();
         System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
-        mostrarArreglo(resultado2);
+        //mostrarArreglo(resultado2);
 
 
         //para la multiplicacion de c x d
@@ -247,6 +251,26 @@ public class Test {
         //MultiplicarNumerosGrandes2: 16400 nanosegundos 
     }
 
+
+    public static int[] generarArreglo(int tamaño) {
+        Random random = new Random();
+        int[] arreglo = new int[tamaño];
+        for (int i = 0; i < tamaño; i++) {
+            arreglo[i] = random.nextInt(10); // Genera números aleatorios entre 0 y 9
+        }
+        return arreglo;
+    }
+
+    public static int[][] generarMatriz(int filas, int columnas) {
+        Random random = new Random();
+        int[][] matriz = new int[filas][columnas];
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                matriz[i][j] = random.nextInt(10); // Genera números aleatorios entre 0 y 9
+            }
+        }
+        return matriz;
+    }
 
 
 
