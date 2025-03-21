@@ -1,8 +1,9 @@
 package ejercicios;
+
 public class MaximoComunDivisor {
     
+public int determinarMCD1(int a,int b)
 
-    public int determinarMCD1(int a,int b)
 {
 
 int valora, valorb;
