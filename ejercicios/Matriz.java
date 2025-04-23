@@ -2,6 +2,8 @@ package ejercicios;
 public class Matriz {
     
 
+
+    //Recorre la matriz completa y verifica si es simetrica
     public boolean esSimetrica1 ( double[][] arreglo )
     {
 
@@ -27,7 +29,7 @@ public class Matriz {
     }
 
 
-    
+    //Recorre la matriz solo la mitad sobre la diagonal principal y verifica si es simetrica
     public boolean esSimetrica2 (double[][] arreglo)
     {
 
@@ -52,7 +54,7 @@ public class Matriz {
     }
 
 
-
+    //Recorre la matriz solo la mitad debajo de la diagonal principal y verifica si es simetrica
     public boolean esSimetrica3(double[][] arreglo) {
         int n = arreglo.length;
 
