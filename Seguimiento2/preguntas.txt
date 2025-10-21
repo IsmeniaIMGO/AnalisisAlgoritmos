@@ -1,0 +1,46 @@
+ Preprocesamiento de texto
+1. ¿Qué técnicas de preprocesamiento aplicaste a los abstracts? ¿Por qué elegiste esas?
+
+2. ¿Cómo trataste palabras vacías (stopwords), lematización o stemming?
+
+3. ¿Cómo transformaste el texto a una representación numérica? ¿TF-IDF, embeddings, bag-of-words?
+
+📏 Cálculo de similitud
+4. ¿Qué métrica de similitud utilizaste? ¿Por qué esa y no otra (por ejemplo, coseno, euclidiana, Jaccard)?
+
+5. ¿Cómo afecta tu elección de representación de texto a la métrica de similitud?
+
+🧬 Algoritmos de clustering jerárquico
+6. ¿Qué algoritmos jerárquicos implementaste? (por ejemplo, aglomerativo, divisivo)
+
+7. ¿Qué métodos de enlace usaste? (single, complete, average, ward...)
+
+8. ¿Qué estructuras de datos usaste para cada algoritmo? ¿Por qué son adecuadas?
+
+9. ¿Tu implementación fue desde cero o usaste alguna biblioteca? ¿Dónde está el aporte personal?
+
+🌲 Visualización (dendrograma)
+10. ¿Qué biblioteca usaste para generar el dendrograma?
+
+11. ¿Cómo interpretas el dendrograma generado? ¿Qué patrones encontraste?
+
+🧠 Evaluación de resultados
+12. ¿Cómo evaluaste la coherencia de los agrupamientos respecto a las categorías del proyecto?
+
+13. ¿Qué algoritmo produjo agrupamientos más coherentes? ¿Tienes ejemplos concretos?
+
+14. ¿Qué criterios usaste para definir “coherente” en este contexto?
+
+🧱 Integración en la arquitectura
+15. ¿Cómo integraste este módulo en la arquitectura general del proyecto?
+
+16. ¿Cómo se comunica tu parte con otros componentes del sistema?
+
+17. ¿Tu solución es escalable? ¿Cómo la modificarías para procesar más abstracts?
+
+🧪 Reflexión técnica
+18. ¿Qué dificultades técnicas encontraste y cómo las resolviste?
+
+19. ¿Qué harías diferente si tuvieras más tiempo o más datos?
+
+20. ¿Cómo validarías que tu solución generaliza bien a nuevos textos?
